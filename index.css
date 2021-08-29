@@ -1,0 +1,229 @@
+/* CSS Reset */
+*{
+    margin: 0%;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS variables */
+:root{
+    --navbar-height:59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* height: 75px; */
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+ }
+
+/* Navigation Bar: Logo and Image*/
+#logo{
+  margin: 20px 5px;
+}
+#logo img{
+    margin: 3px 6px;
+    width: 100px;
+    filter: invert(100%);
+}
+
+/* Navigation Bar: List styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+/* why we are giving padding in a because when we will hover the element it should come only to anchor tag element */
+#navbar ul li a{
+    /* By default anchor tag is inline & to give padding we make it block */
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+#navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    
+}
+
+/* Home section */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+#home::before{
+    content: "";
+    background: url('bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.89; 
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+    /* background-color: papayawhip; */
+}
+#services .box{
+border: 2px solid brown;
+padding: 34px;
+margin: 10px 10px;
+margin-bottom: 20px;
+border-radius: 28px;
+background-color: rgb(226, 219, 219);
+}
+#services .box img{
+height: 160px;
+margin: auto;
+display: block;
+}
+#services .box img:hover{
+transform: rotate(10deg);
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}
+
+/* Clients section */
+#client-section{
+   /* height: 340px; */
+   position: relative;
+}
+#client-section::before{
+    content: "";
+    background: url('bg6.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.54; */
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-items{
+    padding: 24px;
+}
+#clients img{
+    height: 150px;
+}
+
+/* contact us section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    background: url('bg7.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* top: 0px; */
+    /* left: 0px; */
+    z-index: -1;
+    opacity: 0.89;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box,input,
+#contact-box,textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 30%
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+#contact-box form .btn{
+    background-color: rgb(36, 36, 255);
+}
+#contact-box form .btn:hover{
+    background-color: rgb(36, 36, 255,0.8);
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility classes */
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.1rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(155, 75, 75);
+}
+.center{
+    text-align: center;
+}
+
+
